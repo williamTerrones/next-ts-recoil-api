@@ -30,9 +30,7 @@ const todosStore = () => {
 
     }
 
-    const deleteTodo = (id:number) => {
-        setTodos(e => e.filter(todo=>todo.id!==id) )
-    }
+    const deleteTodo = (id:number) => setTodos(e => e.filter(todo=>todo.id!==id) )
 
     return {
         todos,
