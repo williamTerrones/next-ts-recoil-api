@@ -1,21 +1,21 @@
 import type { NextPage } from 'next'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Loading from '../components/Loading'
-import UsersList from '../components/Users/List'
-import userStore from '../store/user'
+import todosStore from '../store/todos'
+import TodosList from '../components/Todos/List';
 
 const Home: NextPage = () => {
-  const { users, getUsers, loading } = userStore()
+  const { todos, getTodos, loading } = todosStore()
 
   useEffect(() => {
-    getUsers()
+    getTodos()
   }, [])
 
   if(loading) return <Loading /> 
 
   return (
     <div>
-      <UsersList users={users} />
+      <TodosList todos={todos} />
     </div>
   )
 

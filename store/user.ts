@@ -3,28 +3,30 @@ import jsonPlaceholderApi from "../api/jsonPlaceholderApi";
 import { User } from '../models/user';
 
 const usersState = atom<User[]>({
-    key: 'users',
+    key: 'usersState',
     default: [],
 })
 
-const loadingState = atom({
-    key: 'loading',
+const loadingUsersState = atom({
+    key: 'loadingUsersState',
     default: true,
 })
 
 const userStore = () => {
 
     const [users, setUsers] = useRecoilState(usersState)
-    const [loading, setLoading] = useRecoilState(loadingState)
+    const [loading, setLoading] = useRecoilState(loadingUsersState)
 
     const getUsers = async () => {
 
         if(users.length) return
 
         const {data} = await jsonPlaceholderApi.get('/users')
-        setUsers(data)
-        setLoading(false)
         
+        setTimeout(() => {
+            setUsers(data)
+            setLoading(false)   
+        },500)
 
     }
 
