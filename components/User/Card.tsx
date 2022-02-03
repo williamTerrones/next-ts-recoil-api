@@ -26,7 +26,7 @@ const BodyCard = ({ user }: Props) => {
   )
 }
 
-export default function UsersCard({ user }: Props) {
+export default function UserCard({ user }: Props) {
 
   return (
     <Card>

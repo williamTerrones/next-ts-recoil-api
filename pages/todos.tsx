@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import { useEffect } from 'react'
 import Loading from '../components/Loading'
 import todosStore from '../store/todos'
-import TodosList from '../components/Todos/List';
+import TodoList from '../components/Todo/List';
 
 const Home: NextPage = () => {
   const { todos, getTodos, loading } = todosStore()
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <TodosList todos={todos} />
+      <TodoList todos={todos} />
     </div>
   )
 

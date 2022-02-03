@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { useEffect, useState } from 'react'
 import Loading from '../components/Loading'
-import UsersList from '../components/Users/List'
+import UserList from '../components/User/List'
 import userStore from '../store/user'
 
 const Home: NextPage = () => {
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <UsersList users={users} />
+      <UserList users={users} />
     </div>
   )
 

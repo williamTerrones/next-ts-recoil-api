@@ -7,7 +7,7 @@ interface Props {
     todos: Todo[],
 }
 
-const TodosList = ({ todos }: Props) => {
+const TodoList = ({ todos }: Props) => {
     return (
         <ListGroup>
             <Row>
@@ -26,4 +26,4 @@ const TodosList = ({ todos }: Props) => {
     )
 };
 
-export default TodosList
+export default TodoList

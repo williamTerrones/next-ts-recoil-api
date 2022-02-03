@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap"
-import NavBar from "./Navbar"
+import NavBar from "./NavBar"
 
 interface Props {
     children:any
