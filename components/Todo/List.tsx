@@ -6,7 +6,7 @@ import TodoItem from './Item';
 interface Props {
     todos: Todo[],
 }
-
+ 
 const TodoList = ({ todos }: Props) => {
     return (
         <ListGroup>
